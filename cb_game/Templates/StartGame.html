@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cow Bull Game</title>
+    
+</head>
+<body>
+    <h1>Cow Bull Game</h1>
+
+    <div id="gameInterface">
+        <p>
+            Welcome to the Cow Bull Game. You can start a new game or continue an existing one.
+        </p>
+
+        <form id="startGameForm">
+            <label for="playerName">Player Name:</label>
+            <input type="text" name="playerName" id="playerName" required>
+            <label for="attempts">Number of Attempts:</label>
+            <input type="number" name="attempts" id="attempts" min="1" max="10" required>
+            <button type="button" id="startGameButton">Start Game</button>
+        </form>
+    </div>
+
+    <div id="playGameInterface" style="display: none;">
+        <p>
+            You are now playing the game. Enter your 4-digit guess below and click "Submit."
+        </p>
+
+        <form id="playGameForm">
+            <label for="guessInput">Your Guess:</label>
+            <input type="text" name="guessInput" id="guessInput" maxlength="4" required>
+            <button type="button" id="submitButton">Submit</button>
+        </form>
+
+        <div id="gameStatus"></div>
+    </div>
+
+    <!-- Include any JavaScript files here -->
+    <script src="{% static 'cowbull_game.js' %}"></script>
+</body>
+</html>
